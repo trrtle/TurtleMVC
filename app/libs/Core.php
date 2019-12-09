@@ -11,24 +11,53 @@ Class Core{
     protected $params = [];
 
     public function __construct(){
-        // print_r($this->getUrl());
 
         $url = $this->getUrl();
 
         // look into controllers for the first value
-        if(file_exists('../app/controllers' . ucwords($url[0]) . '.php')){
+        if(file_exists('../app/controllers/' . ucwords($url[0]) . '.php')){
 
             // if exists, set current controller
             $this->currentController = ucwords($url[0]);
-            echo $this->currentController;
-            unset($url[0]);
+        }
+
+        // if controller isset
+        if (isset($url[0])){
+            // remove the Controller from the url array
+            array_shift($url);
         }
 
         // require the controller
         require_once '../app/controllers/' . $this->currentController . '.php';
 
-        // init the controller. example: $pages = new Pages
+        // instantiate the controller. example: $pages = new Pages
         $this->currentController = new $this->currentController;
+
+        //check for second part of the url
+        if(isset($url[0])){
+
+            // check if method exists in the current controller
+            if(method_exists($this->currentController, $url[0])){
+
+                // set current method the same as second part of the url
+                $this->currentMethod = $url[0];
+
+
+            }
+
+            // remove the method from the url array
+            array_shift($url);
+        }
+
+        // get params
+        if(isset($url)){
+            $this->params = array_values($url);
+        }else{
+            $this->params = [];
+        }
+
+        // call a callback function with the currentController->currentMethod(params)
+        call_user_func_array([$this->currentController, $this->currentMethod], $this->params);
     }
 
     /*

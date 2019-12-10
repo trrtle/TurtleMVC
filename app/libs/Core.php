@@ -4,7 +4,6 @@
  * Creates URL & loads core controller
  * URL format: /controller/method/params
  */
-
 Class Core{
     protected $currentController = 'Pages';
     protected $currentMethod = 'index';

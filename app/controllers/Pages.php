@@ -7,11 +7,13 @@ class Pages extends Controller{
     }
 
     public function index(){
-
+        $data = [
+            "title"=>"Welcome"
+        ];
+        $this->view('Pages/index', $data);
     }
 
-    public function about($param){
-        echo "this is about";
-        echo "<br> this is the $param";
+    public function about(){
+        $this->view('Pages/about');
     }
 }

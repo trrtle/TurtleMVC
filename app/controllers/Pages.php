@@ -10,10 +10,10 @@ class Pages extends Controller{
         $data = [
             "title"=>"Welcome"
         ];
-        $this->view('Pages/index', $data);
+        $this->view('/Pages/index', $data);
     }
 
     public function about(){
-        $this->view('Pages/about');
+        $this->view('/Pages/about');
     }
 }

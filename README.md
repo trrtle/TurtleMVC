@@ -24,4 +24,4 @@ The View component is used for all the UI logic of the application. This compone
 The controller is the middle man. It controls which view will be loaded and the kind of data is being send with it.
 
 ### <a name="model">Model</a>
-The model component handels all the data related logic that the user works with. For example, a user object wil retrieve all the user information from the database, manipulate it and update it back to the database or use it to render data.
+The model component handels all the data related logic that the user works with. For example, a user object wil retrieve all the user information from the database, manipulate it in the view and update it back to the database or use it to render data.

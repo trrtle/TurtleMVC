@@ -5,7 +5,7 @@ Welcome to the TurtleMVC wiki!
 
 * [What is a MVC framework?](#whatismvc)
   - [View](#view)
-  - [Controller(#controller)
+  - [Controller](#controller)
   - [Model](#model)
 
 

@@ -8,7 +8,7 @@ Welcome to the TurtleMVC wiki!
   - [Controller](#controller)
   - [Model](#model)
 * [Getting started](#getstarted)
-  -[Download & Configuration](#config)
+  - [Download & Configuration](#config)
 
 ## <a name="whatismvc"> What is a MVC framework? </a>
 

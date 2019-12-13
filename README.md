@@ -1,5 +1,7 @@
 # Quick start
 
+for more information <a href="https://github.com/trrtle/TurtleMVC/wiki">refer to the wiki</a>
+
 ## <a name="config">Download & Configuration</a>
 1. download the archive and unzip in your projects directory.
 2. edit the following line in file: public/.htaccess 

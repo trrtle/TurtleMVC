@@ -8,6 +8,7 @@ Welcome to the TurtleMVC wiki!
   - [Controller](#controller)
   - [Model](#model)
 * [Getting started](#getstarted)
+  -[Download & Configuration](#config)
 
 ## <a name="whatismvc"> What is a MVC framework? </a>
 
@@ -29,7 +30,7 @@ The model component handels all the data related logic that the user works with.
 ## <a name="getstarted">Getting started</a>
 this part is still under construction.
 
-### Download & Configuration
+### <a name="config">Download & Configuration</a>
 1. download the archive and unzip in your projects directory.
 2. edit the following line in file: public/.htaccess 
   ```

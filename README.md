@@ -30,9 +30,23 @@ The model component handels all the data related logic that the user works with.
 this part is still under construction.
 
 ### Download & Configuration
-1. download the archive en unzip in your projects directory.
-2. edit the following file: public/.htaccess 
+1. download the archive and unzip in your projects directory.
+2. edit the following line in file: public/.htaccess 
   ```
   RewriteBase /_YOUR_PROJECT_DIR_/public
   ```
-3.
+3. then edit the database configuration in the file: app/config/config.php
+```
+define('DB_HOST', "YOUR_DB_HOST");
+define('DB_USER', '_YOUR_USER_');
+define('DB_SECRET', '_YOUR_PASSWORD_');
+define('DB_NAME', '_YOUR_DB_NAME_');
+```
+4. then edit the following lines in the same file: app/config/config.php
+```
+// URL root example: localhost/TurtleMVC
+define("URLROOT", "__YOUR_URL_)");
+// Site name
+define("SITENAME", "_YOUR_SITE_NAME_");
+```
+Configuration done!

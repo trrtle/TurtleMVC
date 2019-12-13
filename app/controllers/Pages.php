@@ -3,10 +3,13 @@
 class Pages extends Controller{
 
     public function __construct(){
-        $this->postModel = $this->model('Post');
+
+        // set model here, for example:  $this->postModel = $this->model('Post');
+
     }
 
     public function index(){
+
         $data = [
             "title"=>"Welcome"
         ];

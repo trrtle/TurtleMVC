@@ -28,3 +28,11 @@ The model component handels all the data related logic that the user works with.
 
 ## <a name="getstarted">Getting started</a>
 this part is still under construction.
+
+### Download & Configuration
+1. download the archive en unzip in your projects directory.
+2. edit the following file: public/.htaccess 
+  ```
+  RewriteBase /_YOUR_PROJECT_DIR_/public
+  ```
+3.

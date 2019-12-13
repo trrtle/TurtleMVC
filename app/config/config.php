@@ -1,13 +1,13 @@
 <?php
 // Db params
-define('DB_HOST', "database");
-define('DB_USER', 'root');
-define('DB_SECRET', 'toor');
-define('DB_NAME', 'tmvc');
+define('DB_HOST', "YOUR_DB_HOST");
+define('DB_USER', '_YOUR_USER_');
+define('DB_SECRET', '_YOUR_PASSWORD_');
+define('DB_NAME', '_YOUR_DB_NAME_');
 
 // app root
 define('APPROOT', dirname(__DIR__));
 // URL root
-define("URLROOT", "http://localhost:58010/TurtleMVC");
+define("URLROOT", "__YOUR_URL_)");
 // Site name
-define("SITENAME", "TurtleMVC");
+define("SITENAME", "_YOUR_SITE_NAME_");

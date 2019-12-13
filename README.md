@@ -42,9 +42,9 @@ define('DB_USER', '_YOUR_USER_');
 define('DB_SECRET', '_YOUR_PASSWORD_');
 define('DB_NAME', '_YOUR_DB_NAME_');
 ```
-4. then edit the following lines in the same file: app/config/config.php
+4. last but not least edit the following lines in the same file: app/config/config.php
 ```
-// URL root example: localhost/TurtleMVC
+// URL root example: localhost/TurtleMVC/
 define("URLROOT", "__YOUR_URL_)");
 // Site name
 define("SITENAME", "_YOUR_SITE_NAME_");

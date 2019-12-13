@@ -11,7 +11,7 @@ class Pages extends Controller{
     public function index(){
 
         $data = [
-            "title"=>"Welcome"
+            "title"=>"TurtleMVC"
         ];
         $this->view('/Pages/index', $data);
     }

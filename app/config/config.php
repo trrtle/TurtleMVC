@@ -1,4 +1,13 @@
 <?php
+/**
+ * libs/config.php - configurations are made here
+ *
+ * @package    TurtleMVC-Core
+ * @license    https://opensource.org/licenses/BSD-3-Clause
+ * @author     Micky Aarnoudse
+ * @copyright  2020 Micky Aarnoudse
+ */
+
 // Db params
 define('DB_HOST', "YOUR_DB_HOST");
 define('DB_USER', '_YOUR_USER_');

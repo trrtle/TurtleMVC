@@ -1,4 +1,12 @@
 <?php
+/**
+ * libs/Controller.php - Base controller, loads models and views.
+ *
+ * @package    TurtleMVC-Core
+ * @license    https://opensource.org/licenses/BSD-3-Clause
+ * @author     Micky Aarnoudse
+ * @copyright  2020 Micky Aarnoudse
+ */
 
 /*
  * Base Controller

@@ -10,8 +10,18 @@
 
 /*
  * App Core Class
- * Creates URL & loads core controller
+ * Loads Controller->Method(params)
  * URL format: /controller/method/params
+ */
+/**
+ * App core class
+ *
+ * Gets URL & executes Controller->Method(params)
+ * URL format: /controller/method/params
+ *
+ * @property string $currentController - controller that is requested by the URL
+ * @property string $currentMethod - Method of the controller (second part of the url)
+ * @property array $params - Parameters given to the $currentMethod
  */
 Class Core{
     protected $currentController = 'Pages';
@@ -68,9 +78,10 @@ Class Core{
         call_user_func_array([$this->currentController, $this->currentMethod], $this->params);
     }
 
-    /*
-     * function getUrl
-     * returns array with the url
+    /**
+     * Gets the url and convert it to an array
+     *
+     * @return array url seperated by /
      */
     public function getUrl(){
         if(isset($_GET['url'])){

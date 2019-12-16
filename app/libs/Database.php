@@ -9,12 +9,22 @@
  * @copyright  2020 Micky Aarnoudse
  */
 
-/*
- * PDO Databae class
- * Connect to database
+/**
+ * General Database class
+ *
+ * Create a database connection using PDO
  * Create prepared statements
- * Bind values
+ * Bind Values
  * Return rows and results
+ *
+ * @property string $db_host- Database host. set in app/config/config.php
+ * @property string $db_user - Database username. set in app/config/config.php
+ * @property string $db_secret - Database user password. set in app/config/config.php
+ * @property string $db_name - Database name. set in app/config/config.php
+ *
+ * @property string $dsn - contains the information required to connect to the database.
+ * @property string $stmt - contains the prepared statement.
+ * @property string error - contains an PDO exception message
  */
 
 class Database{
@@ -40,16 +50,27 @@ class Database{
             $this->dbh = new PDO($dsn, $this->db_user, $this->db_secret, $options);
         }catch (PDOException $e){
             $this->error = $e->getMessage();
-            echo $this->error;
         }
     }
 
-    // Prepare statement with query
+    /**
+     * Prepare the given SQL statement
+     *
+     * @param string $sql - SQL query
+     * @return void
+     */
     public function query($sql){
         $this->stmt = $this->dbh->prepare($sql);
     }
 
-    // Bind values
+    /**
+     * Bind values to the prepared statement
+     *
+     * @param string $param - the :placeholder where the value must be bind to.
+     * @param string|int|bool|null $value - the value that must be bind to the statement
+     * @param static $type (optional) - PDO value type static
+     * @return void
+     */
     public function bind($param, $value, $type = null){
 
         if(is_null($type)){
@@ -71,24 +92,41 @@ class Database{
         $this->stmt->bindValue($param, $value, $type);
     }
 
-    //execute statement
+    /**
+     * excecute the prepared statement.
+     *
+     * @return bool
+     */
     public function execute(){
         return $this->stmt->execute();
     }
 
-    // get result in array of objects
+    /**
+     * Get an array from query result
+     *
+     * @return object - Returns an object containing all of the result set rows
+     */
     public function resultSet(){
         $this->execute();
         return $this->stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
-    // get single result in object
+
+    /**
+     * Get an array from query result
+     *
+     * @return object - Fetches the next row of the result set
+     */
     public function resultRow(){
         $this->execute();
         return $this->stmt->fetch(PDO::FETCH_OBJ);
     }
 
-    // Get row count
+    /**
+     * Counts the amount of rows from an PDO object
+     *
+     * @return int - Amount of rows
+     */
     public function rowCount(){
         return $this->stmt->rowCount();
     }

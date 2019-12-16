@@ -12,4 +12,4 @@ define("SITENAME", "_YOUR_SITE_NAME_");
 // app root
 define('APPROOT', dirname(__DIR__));
 // app version
-define('APPVERSION', "1.0.0");
+define('APPVERSION', "0.0.1");

@@ -16,6 +16,7 @@
  * Create prepared statements
  * Bind Values
  * Return rows and results
+ * count returned rows
  *
  * @property string $db_host- Database host. set in app/config/config.php
  * @property string $db_user - Database username. set in app/config/config.php

@@ -8,16 +8,14 @@
  * @copyright  2020 Micky Aarnoudse
  */
 
-/*
- * App Core Class
- * Loads Controller->Method(params)
- * URL format: /controller/method/params
- */
+
 /**
  * App core class
  *
  * Gets URL & executes Controller->Method(params)
  * URL format: /controller/method/params
+ * @example Posts->edit(post10)
+ * It uses call_user_func_array() to achieve this.
  *
  * @property string $currentController - controller that is requested by the URL
  * @property string $currentMethod - Method of the controller (second part of the url)

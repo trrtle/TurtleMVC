@@ -1,6 +1,6 @@
 <?php
 /**
- * libs/pages.php - Pages controller loads the generic pages.
+ * controllers/Pages.php - Pages controller loads the generic pages.
  *
  * @package    TurtleMVC-Core
  * @license    https://opensource.org/licenses/BSD-3-Clause
@@ -11,8 +11,6 @@
 class Pages extends Controller{
 
     public function __construct(){
-
-        // set model here, for example:  $this->postModel = $this->model('Post');
 
     }
 
